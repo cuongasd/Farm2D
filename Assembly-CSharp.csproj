@@ -56,16 +56,16 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\Controller\GameManager.cs" />
-    <Compile Include="Assets\Script\Controller\PlayerController.cs" />
-    <Compile Include="Assets\Script\Controller\UIController.cs" />
     <Compile Include="Assets\Script\View\Screen\PlayerScreen.cs" />
-    <Compile Include="Assets\Script\View\Screen\ShopScreen.cs" />
-    <Compile Include="Assets\Script\View\Popup\SettingPopup.cs" />
-    <Compile Include="Assets\Script\Model\Player.cs" />
     <Compile Include="Assets\Script\Model\FarmTool.cs" />
-    <Compile Include="Assets\Script\Model\Crops.cs" />
+    <Compile Include="Assets\Script\Controller\PlayerController.cs" />
+    <Compile Include="Assets\Script\View\Screen\ShopScreen.cs" />
+    <Compile Include="Assets\Script\Model\Player.cs" />
+    <Compile Include="Assets\Script\View\Popup\SettingPopup.cs" />
+    <Compile Include="Assets\Script\Controller\GameManager.cs" />
     <Compile Include="Assets\Script\Model\Animal.cs" />
+    <Compile Include="Assets\Script\Model\Crops.cs" />
+    <Compile Include="Assets\Script\Controller\UIController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
