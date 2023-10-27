@@ -59,12 +59,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FixedJoystick.cs" />
     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
     <Compile Include="Assets\Script\Controller\UIController.cs" />
     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\VariableJoystick.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingProfile.cs" />
     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
@@ -77,8 +79,9 @@
     <Compile Include="Assets\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\VignetteComponent.cs" />
+    <Compile Include="Assets\Script\Controller\FarmToolConntroller.cs" />
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenDeUnityExtended.cs" />
-    <Compile Include="Assets\Script\UI\Screen\PlayerScreen.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
     <Compile Include="Assets\Script\Controller\PlayerController.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
@@ -112,10 +115,13 @@
     <Compile Include="Assets\Script\Controller\GameManager.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\UserLutModel.cs" />
     <Compile Include="Assets\Farm Life\Content\Plugins\Light Shaft\Scripts\LightShaft.cs" />
+    <Compile Include="Assets\Script\UI\Screen\PlayScreen.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\DynamicJoystick.cs" />
     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingComponent.cs" />
     <Compile Include="Assets\Script\UI\Screen\ShopScreen.cs" />
@@ -124,10 +130,13 @@
     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\FxaaComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
+    <Compile Include="Assets\Joystick Pack\Scripts\Base\Joystick.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
+    <Compile Include="Assets\Script\Controller\CropsController.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
     <Compile Include="Assets\Farm Life\Content\Plugins\TreeSwinger.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
+    <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\BloomComponent.cs" />
