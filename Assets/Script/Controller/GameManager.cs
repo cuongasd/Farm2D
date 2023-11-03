@@ -9,15 +9,15 @@ public enum GameState
 public class GameManager : Singleton<GameManager>
 {
     public static GameState gameState;
-    public SpriteRenderer mapRenderer;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    public PlayerController playerController;
+    public UIController uiController;
+    public Transform itemHolder;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
+        playerController.Initialize(this);
+        uiController.Initialize(this);
+        uiController.ActiveScreen<PlayScreen>();
         
     }
 }

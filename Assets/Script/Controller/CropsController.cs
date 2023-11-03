@@ -2,17 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CropsController : MonoBehaviour
+public class CropsController : ItemBase
 {
-    // Start is called before the first frame update
-    void Start()
+    public float harvestTime;
+    private float curHarvestTime;
+    public bool isRipe;
+    public void Initialize()
     {
-        
+        curHarvestTime = 0;
+        isRipe = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        if (curHarvestTime > harvestTime)
+        {
+            curHarvestTime += Time.deltaTime;
+        } else
+        {
+            isRipe = true;
+        }
+    }
+
+    public override void OnMouseUpAsButton()
+    {
+        base.OnMouseUpAsButton();
+        if (!isRipe) return;
+        Destroy(gameObject);
     }
 }

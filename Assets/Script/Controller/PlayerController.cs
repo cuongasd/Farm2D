@@ -2,15 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum StatePlayer
+{
+    CROP,
+    HARVEST,
+    SPRINKLERS
+}
 public class PlayerController : MonoBehaviour
 {
     public Joystick joystick;
     public float moveSpeed = 5f;
     [SerializeField] private CharacterController characterController;
-
     public Animator animator;
-    public void Start()
+    public static StatePlayer statePlayer;
+    private GameManager gameManager;
+    public void Initialize(GameManager gameManager)
     {
+        this.gameManager = gameManager;
         characterController = GetComponent<CharacterController>();
     }
 
@@ -32,4 +40,10 @@ public class PlayerController : MonoBehaviour
         moveDirection *= moveSpeed;
         characterController.Move(moveDirection * Time.deltaTime);
     }
+
+    public void ChangeState(StatePlayer state)
+    {
+        statePlayer = state;
+    }
+
 }

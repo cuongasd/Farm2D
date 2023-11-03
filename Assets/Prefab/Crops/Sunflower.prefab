@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4578138729504386}
   - component: {fileID: 33764030928853252}
   - component: {fileID: 23854515195963832}
+  - component: {fileID: 6876821503931964571}
   m_Layer: 0
   m_Name: Sunflower
   m_TagString: Untagged
@@ -85,3 +86,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6876821503931964571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960102849135794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7eb0971e22c4a84490680db2a4f5464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  harvestTime: 5
+  isRipe: 0
