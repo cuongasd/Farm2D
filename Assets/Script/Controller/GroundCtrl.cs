@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GroundCtrl : ItemBase
 {
-    private CropsController cropsController;
-    private bool empty;
+    public int id;
+    public CropsController cropsController;
+    public bool empty;
     public override void OnMouseUpAsButton()
     {
         base.OnMouseUpAsButton();
@@ -17,5 +18,16 @@ public class GroundCtrl : ItemBase
             cropsController.Initialize();
             empty = true;
         }
+    }
+
+    public void SetInfoGround(Ground ground)
+    {
+        if (!empty)
+        {
+            id = ground.id;
+            cropsController = Instantiate(ground.cropsController, transform.position, Quaternion.Euler(0, 0, 0), GameManager.Instance.itemHolder);
+            cropsController.Initialize();
+        }
+
     }
 }
