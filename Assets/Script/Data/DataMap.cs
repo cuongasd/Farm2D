@@ -35,7 +35,8 @@ public class DataMap : Singleton<DataMap>
     }
     public void Save()
     {
-        dataMap = JsonUtility.ToJson(dataGround);
+        string data = JsonUtility.ToJson(dataGround);
+        dataMap = data;
     }
 
     public void SetGround(GroundCtrl groundCtrl)
@@ -45,7 +46,8 @@ public class DataMap : Singleton<DataMap>
             if (i.id == groundCtrl.id)
             {
                 i.empty = groundCtrl.empty;
-                i.cropsController = groundCtrl.cropsController;
+                i.idCrops = groundCtrl.cropsController.id;
+                i.time = groundCtrl.cropsController.curHarvestTime;
                 break;
             }
         }

@@ -12,12 +12,18 @@ public class GameManager : Singleton<GameManager>
     public PlayerController playerController;
     public UIController uiController;
     public Transform itemHolder;
+    public DataMap dataMap;
 
     private void Start()
     {
         playerController.Initialize(this);
         uiController.Initialize(this);
         uiController.ActiveScreen<PlayScreen>();
-        
+        dataMap.LoadData();
+    }
+
+    private void OnApplicationQuit()
+    {
+        playerController.dataPlayer.Save();
     }
 }

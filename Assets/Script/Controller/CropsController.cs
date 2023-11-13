@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CropsController : ItemBase
 {
+    public int id;
     public float harvestTime;
-    private float curHarvestTime;
+    public float curHarvestTime;
     public bool isRipe;
     public void Initialize()
     {

@@ -14,19 +14,21 @@ public class GroundCtrl : ItemBase
         BtnCropsCtrl btnCropsCtrl = GameManager.Instance.uiController.GetScreen<PlayScreen>().btnCropsCtrl;
         if (btnCropsCtrl != null)
         {
-            cropsController = Instantiate(btnCropsCtrl.cropsController, transform.position, Quaternion.Euler(0, 0, 0),GameManager.Instance.itemHolder);
+            cropsController = Instantiate(btnCropsCtrl.cropsController, transform.position, Quaternion.Euler(0, 0, 0), GameManager.Instance.itemHolder);
             cropsController.Initialize();
             empty = true;
+            DataMap.Instance.SetGround(this);
         }
     }
 
     public void SetInfoGround(Ground ground)
     {
-        if (!empty)
+        id = ground.id;
+        if (ground.empty)
         {
-            id = ground.id;
-            cropsController = Instantiate(ground.cropsController, transform.position, Quaternion.Euler(0, 0, 0), GameManager.Instance.itemHolder);
+            cropsController = Instantiate(Resources.Load<CropsController>("Crops_" + ground.idCrops), transform.position, Quaternion.Euler(0, 0, 0), GameManager.Instance.itemHolder);
             cropsController.Initialize();
+            cropsController.curHarvestTime = ground.time;
         }
 
     }

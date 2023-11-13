@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.16034634, g: 0.28672454, b: 0.30796096, a: 1}
+  m_IndirectSpecularColor: {r: 0.16035326, g: 0.28672755, b: 0.30797458, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -898,6 +898,7 @@ GameObject:
   - component: {fileID: 413130875}
   - component: {fileID: 413130876}
   - component: {fileID: 413130877}
+  - component: {fileID: 413130878}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -955,6 +956,24 @@ MonoBehaviour:
   moveSpeed: 1.1
   characterController: {fileID: 413130876}
   animator: {fileID: 1505851205}
+  dataPlayer: {fileID: 413130878}
+--- !u!114 &413130878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413130874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7595df8ea60124e91c365cd332f0a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player:
+    coins: 0
+    level: 0
+    pos: {x: 0, y: 0, z: 0}
+    rotationY: 0
 --- !u!114 &429704266 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2977477819150707506, guid: 3d60bb4b921c89a4396214f2ebf54352, type: 3}
@@ -4026,6 +4045,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8cbfb2cc40517d45b49c32d938745bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dataGround:
+    grounds: []
   groundCtrls:
   - {fileID: 1879674302}
   - {fileID: 1516729852}
@@ -5332,6 +5353,7 @@ MonoBehaviour:
   playerController: {fileID: 413130877}
   uiController: {fileID: 1827387520}
   itemHolder: {fileID: 142875788}
+  dataMap: {fileID: 1559344373}
 --- !u!4 &1961105913
 Transform:
   m_ObjectHideFlags: 0
