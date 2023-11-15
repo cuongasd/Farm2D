@@ -120,7 +120,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203537497403140849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0222, y: 0.15, z: -0.5207}
+  m_LocalPosition: {x: 0.0222, y: 0.213, z: -0.5207}
   m_LocalScale: {x: 0.46768016, y: 0.01818908, z: 0.41526252}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -142,7 +142,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203537497403140849}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -155,7 +155,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b87ca1c58e9e36c4ab3340d6b4006b46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -185,7 +185,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203537497403140849}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -202,6 +202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd1e065c46dd834195473c1ad58a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  cropsController: {fileID: 0}
+  empty: 0
 --- !u!1 &661932259022716367
 GameObject:
   m_ObjectHideFlags: 0
@@ -230,7 +233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661932259022716367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4702, y: 0.15, z: -0.026000023}
+  m_LocalPosition: {x: -0.4702, y: 0.213, z: -0.026000023}
   m_LocalScale: {x: 0.49061754, y: 0.01818908, z: 0.41526252}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -252,7 +255,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661932259022716367}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -265,7 +268,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b87ca1c58e9e36c4ab3340d6b4006b46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -295,7 +298,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 661932259022716367}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -312,6 +315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd1e065c46dd834195473c1ad58a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  cropsController: {fileID: 0}
+  empty: 0
 --- !u!1 &1257106656136732955
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +346,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257106656136732955}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4907, y: 0.15, z: -0.5207}
+  m_LocalPosition: {x: 0.4907, y: 0.213, z: -0.5207}
   m_LocalScale: {x: 0.44613197, y: 0.01818908, z: 0.41526252}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -362,7 +368,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257106656136732955}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -375,7 +381,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b87ca1c58e9e36c4ab3340d6b4006b46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -405,7 +411,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1257106656136732955}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -422,6 +428,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd1e065c46dd834195473c1ad58a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  cropsController: {fileID: 0}
+  empty: 0
 --- !u!1 &2196811032076468636
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +459,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2196811032076468636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4702, y: 0.15, z: -0.5207}
+  m_LocalPosition: {x: -0.4702, y: 0.213, z: -0.5207}
   m_LocalScale: {x: 0.49061754, y: 0.01818908, z: 0.41526252}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -472,7 +481,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2196811032076468636}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -485,7 +494,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b87ca1c58e9e36c4ab3340d6b4006b46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -515,7 +524,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2196811032076468636}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -532,6 +541,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd1e065c46dd834195473c1ad58a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  cropsController: {fileID: 0}
+  empty: 0
 --- !u!1 &2717106736059683783
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2717106736059683783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0222, y: 0.15, z: 0.46600008}
+  m_LocalPosition: {x: 0.0222, y: 0.213, z: 0.46600008}
   m_LocalScale: {x: 0.46768016, y: 0.01818908, z: 0.41526252}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -582,7 +594,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2717106736059683783}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -595,7 +607,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b87ca1c58e9e36c4ab3340d6b4006b46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -625,7 +637,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2717106736059683783}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -642,6 +654,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd1e065c46dd834195473c1ad58a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  cropsController: {fileID: 0}
+  empty: 0
 --- !u!1 &3539224782485500580
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +685,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3539224782485500580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4702, y: 0.15, z: 0.46600008}
+  m_LocalPosition: {x: -0.4702, y: 0.213, z: 0.46600008}
   m_LocalScale: {x: 0.49061754, y: 0.01818908, z: 0.41526252}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -692,7 +707,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3539224782485500580}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -705,7 +720,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b87ca1c58e9e36c4ab3340d6b4006b46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -735,7 +750,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3539224782485500580}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -752,6 +767,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd1e065c46dd834195473c1ad58a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  cropsController: {fileID: 0}
+  empty: 0
 --- !u!1 &4394666048716647566
 GameObject:
   m_ObjectHideFlags: 0
@@ -780,7 +798,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4394666048716647566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0222, y: 0.15, z: -0.026000023}
+  m_LocalPosition: {x: 0.0222, y: 0.213, z: -0.026000023}
   m_LocalScale: {x: 0.46768016, y: 0.01818908, z: 0.41526252}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -802,7 +820,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4394666048716647566}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -815,7 +833,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b87ca1c58e9e36c4ab3340d6b4006b46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -845,7 +863,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4394666048716647566}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -862,6 +880,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd1e065c46dd834195473c1ad58a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  cropsController: {fileID: 0}
+  empty: 0
 --- !u!1 &6534619623486260963
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +911,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6534619623486260963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4907, y: 0.15, z: 0.466}
+  m_LocalPosition: {x: 0.4907, y: 0.213, z: 0.466}
   m_LocalScale: {x: 0.44613197, y: 0.01818908, z: 0.41526252}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -912,7 +933,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6534619623486260963}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -925,7 +946,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b87ca1c58e9e36c4ab3340d6b4006b46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -955,7 +976,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6534619623486260963}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -972,6 +993,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd1e065c46dd834195473c1ad58a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  cropsController: {fileID: 0}
+  empty: 0
 --- !u!1 &7434808874687861284
 GameObject:
   m_ObjectHideFlags: 0
@@ -1000,7 +1024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7434808874687861284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4907, y: 0.15, z: -0.026}
+  m_LocalPosition: {x: 0.4907, y: 0.213, z: -0.026}
   m_LocalScale: {x: 0.44613197, y: 0.01818908, z: 0.41526252}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1022,7 +1046,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7434808874687861284}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1035,7 +1059,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: b87ca1c58e9e36c4ab3340d6b4006b46, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1065,7 +1089,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7434808874687861284}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1082,3 +1106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd1e065c46dd834195473c1ad58a54d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
+  cropsController: {fileID: 0}
+  empty: 0

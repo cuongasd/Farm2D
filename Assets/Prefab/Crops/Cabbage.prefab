@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33907400244548066}
   - component: {fileID: 23533111007875668}
   - component: {fileID: 64427399269286720}
-  - component: {fileID: 2095148205905049625}
   m_Layer: 0
   m_Name: Cabbage
   m_TagString: Untagged
@@ -99,17 +98,3 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 296f76daa24de1d4eb5730ca5673f8e8, type: 3}
---- !u!114 &2095148205905049625
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817159535101244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7eb0971e22c4a84490680db2a4f5464, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  harvestTime: 5
-  isRipe: 0

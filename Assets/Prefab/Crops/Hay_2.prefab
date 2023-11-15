@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33085278639571870}
   - component: {fileID: 23591624810495360}
   - component: {fileID: 65126232046468844}
-  - component: {fileID: 2708418415967044312}
   m_Layer: 0
   m_Name: Hay_2
   m_TagString: Untagged
@@ -98,17 +97,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.2247467, y: 0.20865399, z: 0.25158024}
   m_Center: {x: -0.0011978149, y: 0.10432699, z: -0.00049829483}
---- !u!114 &2708418415967044312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1420999145224674}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7eb0971e22c4a84490680db2a4f5464, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  harvestTime: 5
-  isRipe: 0

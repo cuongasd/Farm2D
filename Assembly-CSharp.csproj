@@ -115,6 +115,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Components\VignetteComponent.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\FogModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Components\TaaComponent.cs" />
+    <Compile Include="Assets\Script\Data\DataPlayer.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\VignetteModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\GrainModel.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\PostProcessingModel.cs" />
@@ -151,7 +152,6 @@
     <Compile Include="Assets\Script\Controller\AnimalCtrl.cs" />
     <Compile Include="Assets\Script\Controller\UIController.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
-    <Compile Include="Assets\Script\Data\DataPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />

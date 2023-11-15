@@ -8,6 +8,8 @@ public class CropsController : ItemBase
     public float harvestTime;
     public float curHarvestTime;
     public bool isRipe;
+    public GameObject glass;
+    public MeshRenderer meshRenderer;
     public void Initialize()
     {
         curHarvestTime = 0;
@@ -16,12 +18,16 @@ public class CropsController : ItemBase
 
     public void Update()
     {
-        if (curHarvestTime > harvestTime)
+        if (curHarvestTime < harvestTime)
         {
+            glass.SetActive(true);
+            meshRenderer.enabled = false;
             curHarvestTime += Time.deltaTime;
         } else
         {
             isRipe = true;
+            glass.SetActive(false);
+            meshRenderer.enabled = true;
         }
     }
 

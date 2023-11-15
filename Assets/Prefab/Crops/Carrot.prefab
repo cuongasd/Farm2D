@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33357459648881510}
   - component: {fileID: 23867243219241602}
   - component: {fileID: 65532303052853882}
-  - component: {fileID: 4516318719321395022}
   m_Layer: 0
   m_Name: Carrot
   m_TagString: Untagged
@@ -99,17 +98,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.032253265, y: 0.02906432, z: 0.13626337}
   m_Center: {x: -0.00083351135, y: 0.01453216, z: 0.028285265}
---- !u!114 &4516318719321395022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185655629821544}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7eb0971e22c4a84490680db2a4f5464, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  harvestTime: 5
-  isRipe: 0

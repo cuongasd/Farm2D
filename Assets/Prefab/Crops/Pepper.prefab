@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 33926537032324858}
   - component: {fileID: 23062505257745134}
   - component: {fileID: 65865533451861072}
-  - component: {fileID: -8251809924903262486}
   m_Layer: 0
   m_Name: Pepper
   m_TagString: Untagged
@@ -99,17 +98,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.04714966, y: 0.08276047, z: 0.046776295}
   m_Center: {x: 0.00022506714, y: 0.041380234, z: -0.00015902519}
---- !u!114 &-8251809924903262486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309774357610714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7eb0971e22c4a84490680db2a4f5464, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  harvestTime: 5
-  isRipe: 0
