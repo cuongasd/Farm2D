@@ -1,18 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class ShopScreen : MonoBehaviour
+using UnityEngine.UI;
+public class ShopScreen : PopupUI
 {
-    // Start is called before the first frame update
-    void Start()
+    public Button btnClose;
+    public void Initialize()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        btnClose.onClick.AddListener(Hide);
     }
 }

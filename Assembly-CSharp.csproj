@@ -152,6 +152,7 @@
     <Compile Include="Assets\Script\Controller\AnimalCtrl.cs" />
     <Compile Include="Assets\Script\Controller\UIController.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Models\DitheringModel.cs" />
+    <Compile Include="Assets\Script\Model\UI\BtnItemBuy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />

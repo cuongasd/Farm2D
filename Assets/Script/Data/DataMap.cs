@@ -39,6 +39,10 @@ public class DataMap : Singleton<DataMap>
         dataMap = data;
     }
 
+    public void SaveGround()
+    {
+    }
+
     public void SetGround(GroundCtrl groundCtrl)
     {
         foreach (Ground i in dataGround.grounds)
