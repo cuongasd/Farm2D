@@ -5,9 +5,9 @@ using UnityEngine;
 public class BtnAnimalCtrl : BtnItembase
 {
     public AnimalCtrl animalCtrl;
-    public override void Initialize(PlayScreen playScreen)
+    public override void Initialize(PlayScreen playScreen, Item item)
     {
-        base.Initialize(playScreen);
+        base.Initialize(playScreen, item);
         button.onClick.AddListener(OnClick);
     }
 

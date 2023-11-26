@@ -20,10 +20,12 @@ public class GameManager : Singleton<GameManager>
         uiController.Initialize(this);
         uiController.ActiveScreen<PlayScreen>();
         dataMap.LoadData();
+        DataPlayer.Instance.AddCoin(1000);
     }
 
     private void OnApplicationQuit()
     {
-        playerController.dataPlayer.Save();
+        DataPlayer.Instance.Save();
+        dataMap.SaveGround();
     }
 }

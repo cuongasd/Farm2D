@@ -8,6 +8,7 @@ public class AnimalCtrl : ItemBase
     private float curHarvestTime;
     public bool isRipe;
     public Animator animator;
+    public int exp;
     public void Initialize()
     {
         curHarvestTime = 0;

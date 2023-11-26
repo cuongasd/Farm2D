@@ -26,6 +26,7 @@ public class DataMap : Singleton<DataMap>
                 Ground g = new Ground(i, groundCtrls[i].cropsController, groundCtrls[i].empty);
                 dataGround.grounds.Add(g);
             }
+            Save();
         }
 
         for (int i = 0; i < dataGround.grounds.Count; i++)
@@ -41,6 +42,11 @@ public class DataMap : Singleton<DataMap>
 
     public void SaveGround()
     {
+        foreach (var i in groundCtrls)
+        {
+            SetGround(i);
+        }
+        Save();
     }
 
     public void SetGround(GroundCtrl groundCtrl)
@@ -50,8 +56,11 @@ public class DataMap : Singleton<DataMap>
             if (i.id == groundCtrl.id)
             {
                 i.empty = groundCtrl.empty;
-                i.idCrops = groundCtrl.cropsController.id;
-                i.time = groundCtrl.cropsController.curHarvestTime;
+                if (groundCtrl.cropsController != null)
+                {
+                    i.idCrops = groundCtrl.cropsController.id;
+                    i.time = groundCtrl.cropsController.curHarvestTime;
+                }
                 break;
             }
         }

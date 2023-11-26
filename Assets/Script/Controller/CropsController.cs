@@ -10,6 +10,7 @@ public class CropsController : ItemBase
     public bool isRipe;
     public GameObject glass;
     public MeshRenderer meshRenderer;
+    public int exp;
     public void Initialize()
     {
         curHarvestTime = 0;

@@ -16,12 +16,11 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     public static StatePlayer statePlayer;
     private GameManager gameManager;
-    public DataPlayer dataPlayer;
     public void Initialize(GameManager gameManager)
     {
         this.gameManager = gameManager;
         characterController = GetComponent<CharacterController>();
-        dataPlayer.LoadData(this);
+        DataPlayer.Instance.LoadData(this);
     }
 
     private void Update()

@@ -10,14 +10,29 @@ public class GroundCtrl : ItemBase
     public override void OnMouseUpAsButton()
     {
         base.OnMouseUpAsButton();
-        if (empty) return;
-        BtnCropsCtrl btnCropsCtrl = GameManager.Instance.uiController.GetScreen<PlayScreen>().btnCropsCtrl;
-        if (btnCropsCtrl != null)
+        if (!empty)
         {
-            cropsController = Instantiate(btnCropsCtrl.cropsController, transform.position, Quaternion.Euler(0, 0, 0), GameManager.Instance.itemHolder);
-            cropsController.Initialize();
-            empty = true;
-            DataMap.Instance.SetGround(this);
+            BtnCropsCtrl btnCropsCtrl = GameManager.Instance.uiController.GetScreen<PlayScreen>().btnCropsCtrl;
+            if (btnCropsCtrl != null && DataItem.Instance.GetAmountSpeeds(btnCropsCtrl.cropsController.id, BtnType.CROPS) > 0)
+            {
+                cropsController = Instantiate(btnCropsCtrl.cropsController, transform.position, Quaternion.Euler(0, 0, 0), GameManager.Instance.itemHolder);
+                cropsController.Initialize();
+                empty = true;
+                DataMap.Instance.SetGround(this);
+                DataItem.Instance.AddItemSpeeds(cropsController.id, BtnType.CROPS, -1);
+            }
+        }
+        else
+        {
+            if (cropsController.isRipe)
+            {
+                DataItem.Instance.AddAmountRipe(cropsController.id, BtnType.CROPS, 1);
+                DataPlayer.Instance.AddExp(cropsController.exp);
+                Destroy(cropsController.gameObject);
+                cropsController = null;
+                empty = false;
+                DataMap.Instance.SetGround(this);
+            }
         }
     }
 
@@ -29,6 +44,7 @@ public class GroundCtrl : ItemBase
             cropsController = Instantiate(Resources.Load<CropsController>("Crops_" + ground.idCrops), transform.position, Quaternion.Euler(0, 0, 0), GameManager.Instance.itemHolder);
             cropsController.Initialize();
             cropsController.curHarvestTime = ground.time;
+            empty = true;
         }
 
     }

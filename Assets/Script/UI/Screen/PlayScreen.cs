@@ -4,10 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PlayScreen : ScreenUI
 {
-    [Header ("Content")]
-    public Text level;
-    public Text txtCoin;
+    [Header("Content")]
     public Button btnShop;
+    public Button btnChest;
     public Button btnSetting;
     public FixedJoystick fixedJoystick;
     public List<BtnItembase> btnItembases;
@@ -15,14 +14,19 @@ public class PlayScreen : ScreenUI
     public BtnAnimalCtrl btnAnimalCtrl;
     public Button btnCrops;
     public Button btnAnimal;
+    public Color colorDefault;
+    public Color colorSelect;
+    public DataItem dataItem;
     public override void Initialize(UIController uiController)
     {
         base.Initialize(uiController);
         btnShop.onClick.AddListener(OnShop);
+        btnChest.onClick.AddListener(OnChest);
         btnSetting.onClick.AddListener(OnSetting);
+        dataItem.LoadData(btnItembases);
         for (int i = 0; i < btnItembases.Count; i++)
         {
-            btnItembases[i].Initialize(this);
+            btnItembases[i].Initialize(this, dataItem.items.listItem[i]);
         }
         btnCrops.onClick.AddListener(OnCrops);
         btnAnimal.onClick.AddListener(OnAnimal);
@@ -35,7 +39,12 @@ public class PlayScreen : ScreenUI
     }
     public void OnShop()
     {
+        uiController.ShowPopup<ShopPopup>(null);
+    }
 
+    public void OnChest()
+    {
+        uiController.ShowPopup<ChestPopup>(null);
     }
 
     public void OnSetting()
@@ -47,10 +56,10 @@ public class PlayScreen : ScreenUI
     {
         for (int i = 0; i < btnItembases.Count; i++)
         {
-            btnItembases[i].button.image.color = Color.white;
+            btnItembases[i].button.image.color = colorDefault;
         }
 
-        btnCropsCtrl.button.image.color = Color.blue;
+        btnCropsCtrl.button.image.color = colorSelect;
         this.btnCropsCtrl = btnCropsCtrl;
     }
 
@@ -58,10 +67,10 @@ public class PlayScreen : ScreenUI
     {
         for (int i = 0; i < btnItembases.Count; i++)
         {
-            btnItembases[i].button.image.color = Color.white;
+            btnItembases[i].button.image.color = colorDefault;
         }
 
-        btnAnimalCtrl.button.image.color = Color.blue;
+        btnAnimalCtrl.button.image.color = colorSelect;
         this.btnAnimalCtrl = btnAnimalCtrl;
     }
     public void OnCrops()
@@ -71,7 +80,8 @@ public class PlayScreen : ScreenUI
             if (btnItembases[i].type == BtnType.CROPS)
             {
                 btnItembases[i].gameObject.SetActive(true);
-            } else
+            }
+            else
             {
                 btnItembases[i].gameObject.SetActive(false);
             }
@@ -79,6 +89,7 @@ public class PlayScreen : ScreenUI
             btnCrops.image.color = Color.green;
             btnAnimal.image.color = Color.white;
         }
+        btnAnimalCtrl = null;
     }
 
     public void OnAnimal()
@@ -97,5 +108,15 @@ public class PlayScreen : ScreenUI
             btnCrops.image.color = Color.white;
             btnAnimal.image.color = Color.green;
         }
+        btnCropsCtrl = null;
+    }
+
+    public void UpdateTxtItem()
+    {
+        for (int i = 0; i < btnItembases.Count; i++)
+        {
+            btnItembases[i].SetTxt(dataItem.items.listItem[i]);
+        }
+
     }
 }

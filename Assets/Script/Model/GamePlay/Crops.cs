@@ -8,4 +8,5 @@ public class Crops
     public float price;
     public Sprite icon;
     public CropsController cropsObj;
+
 }

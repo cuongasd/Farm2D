@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DataPlayer : MonoBehaviour
+public class DataPlayer : Singleton<DataPlayer>
 {
     public string dataPl
     {
@@ -28,6 +28,19 @@ public class DataPlayer : MonoBehaviour
         }
     }
 
+    public void AddCoin(int amount)
+    {
+        player.coins += amount;
+        Save();
+        GameManager.Instance.uiController.GetPopup<TopUIPopup>().UpdateTxt();
+    }
+
+    public void AddExp(int amount)
+    {
+        player.exp += amount;
+        Save();
+        GameManager.Instance.uiController.GetPopup<TopUIPopup>().UpdateTxt();
+    }
     public void Save()
     {
         player.pos = playerController.transform.position;
