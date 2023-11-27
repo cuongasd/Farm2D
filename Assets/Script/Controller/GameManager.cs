@@ -8,6 +8,11 @@ public enum GameState
 }
 public class GameManager : Singleton<GameManager>
 {
+    public int firstPlay
+    {
+        get => PlayerPrefs.GetInt("first_play", 0);
+        set => PlayerPrefs.GetInt("first_play", value);
+    }
     public static GameState gameState;
     public PlayerController playerController;
     public UIController uiController;
@@ -20,7 +25,11 @@ public class GameManager : Singleton<GameManager>
         uiController.Initialize(this);
         uiController.ActiveScreen<PlayScreen>();
         dataMap.LoadData();
-        DataPlayer.Instance.AddCoin(1000);
+        if (firstPlay <= 0)
+        {
+            DataPlayer.Instance.AddCoin(1000);
+            firstPlay++;
+        }
     }
 
     private void OnApplicationQuit()

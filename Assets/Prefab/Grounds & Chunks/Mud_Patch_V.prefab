@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33497936508037964}
   - component: {fileID: 23219549785200072}
   - component: {fileID: 6032080311115443880}
+  - component: {fileID: 680356379883677015}
   m_Layer: 0
   m_Name: Mud_Patch_V
   m_TagString: Untagged
@@ -97,3 +98,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.470113, y: 0.06217727, z: 1.4701127}
   m_Center: {x: -0.0027023554, y: 0.004444302, z: 0.0033770204}
+--- !u!114 &680356379883677015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637517251736578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97afbec4fb307f44491b7b2494bd38e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
+  animalCtrl: {fileID: 0}
+  empty: 0

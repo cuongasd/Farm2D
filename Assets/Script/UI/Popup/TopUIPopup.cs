@@ -6,7 +6,6 @@ public class TopUIPopup : PopupUI
 {
     public Text levelTxt;
     public Text coinTxt;
-    public int exp;
     public override void Initialize(UIController uiController)
     {
         base.Initialize(uiController);

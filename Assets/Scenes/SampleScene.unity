@@ -1371,7 +1371,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594654765}
-  m_LocalRotation: {x: 0.24645825, y: -0.10239275, z: 0.026194977, w: 0.96337324}
+  m_LocalRotation: {x: 0.24645826, y: -0.10239278, z: 0.026194984, w: 0.96337324}
   m_LocalPosition: {x: 4.5371304, y: 0.082772374, z: -1.9951664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2208,7 +2208,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.24645825, y: -0.10239275, z: 0.026194977, w: 0.96337324}
+  m_LocalRotation: {x: 0.24645826, y: -0.10239278, z: 0.026194984, w: 0.96337324}
   m_LocalPosition: {x: 4.5371304, y: 0.082772374, z: -1.9951664}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2598,30 +2598,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1484849322}
     m_Modifications:
-    - target: {fileID: 1126767552, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
-      propertyPath: price
-      value: 7680
-      objectReference: {fileID: 0}
-    - target: {fileID: 538018955098808698, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
-      propertyPath: price
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 1932982529725695984, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
-      propertyPath: price
-      value: 480
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223042892655071260, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
-      propertyPath: price
-      value: 960
-      objectReference: {fileID: 0}
-    - target: {fileID: 5268419257952967987, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
-      propertyPath: price
-      value: 3480
-      objectReference: {fileID: 0}
-    - target: {fileID: 6954025157647662077, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
-      propertyPath: price
-      value: 30720
-      objectReference: {fileID: 0}
     - target: {fileID: 7113833374749101275, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2709,18 +2685,6 @@ PrefabInstance:
     - target: {fileID: 7113833374749101276, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
       propertyPath: m_Name
       value: ChestPopup
-      objectReference: {fileID: 0}
-    - target: {fileID: 8557780637410005703, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
-      propertyPath: price
-      value: 240
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634684014149495066, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
-      propertyPath: price
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 8955968845198570493, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
-      propertyPath: price
-      value: 15360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd335a9be0eaba740b8a252da3367207, type: 3}
@@ -6211,38 +6175,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1484849322}
     m_Modifications:
-    - target: {fileID: 558239478, guid: 5c6bb9d013ed70447a461e08b1450890, type: 3}
-      propertyPath: price
-      value: 240
-      objectReference: {fileID: 0}
-    - target: {fileID: 679479164, guid: 5c6bb9d013ed70447a461e08b1450890, type: 3}
-      propertyPath: price
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 874549369, guid: 5c6bb9d013ed70447a461e08b1450890, type: 3}
-      propertyPath: price
-      value: 960
-      objectReference: {fileID: 0}
-    - target: {fileID: 1924716304, guid: 5c6bb9d013ed70447a461e08b1450890, type: 3}
-      propertyPath: price
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 2033260578, guid: 5c6bb9d013ed70447a461e08b1450890, type: 3}
-      propertyPath: price
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 2122753077, guid: 5c6bb9d013ed70447a461e08b1450890, type: 3}
-      propertyPath: price
-      value: 480
-      objectReference: {fileID: 0}
-    - target: {fileID: 7113833374035697607, guid: 5c6bb9d013ed70447a461e08b1450890, type: 3}
-      propertyPath: price
-      value: 7680
-      objectReference: {fileID: 0}
-    - target: {fileID: 7113833374035697608, guid: 5c6bb9d013ed70447a461e08b1450890, type: 3}
-      propertyPath: price
-      value: 3840
-      objectReference: {fileID: 0}
     - target: {fileID: 7113833374749101275, guid: 5c6bb9d013ed70447a461e08b1450890, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -9,9 +9,11 @@ public class BtnItemBuy : MonoBehaviour
     public int id;
     public BtnType btnType;
     public int price;
+    public Text priceTxt;
     public void Initialize()
     {
         btnBuy.onClick.AddListener(OnBuy);
+        priceTxt.text = $"{price}";
     }
 
     public void OnBuy()
