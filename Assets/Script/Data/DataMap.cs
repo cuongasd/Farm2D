@@ -12,8 +12,10 @@ public class DataMap : Singleton<DataMap>
 
     public DataGround dataGround;
     public List<GroundCtrl> groundCtrls;
+    public List<VacantLand> vacantLands;
     public void LoadData()
     {
+        int x = 0;
         if (dataMap.Length > 0)
         {
             dataGround = JsonUtility.FromJson<DataGround>(dataMap);
@@ -23,15 +25,35 @@ public class DataMap : Singleton<DataMap>
             dataGround.grounds = new List<Ground>();
             for (int i = 0; i < groundCtrls.Count; i++)
             {
-                Ground g = new Ground(i, groundCtrls[i].cropsController, null, groundCtrls[i].empty);
+                Ground g = new Ground(x, groundCtrls[i].cropsController, null, groundCtrls[i].empty);
                 dataGround.grounds.Add(g);
+                x++;
+            }
+
+            for (int i = 0; i < vacantLands.Count; i++)
+            {
+                Ground g = new Ground(x, null, vacantLands[i].animalCtrl, groundCtrls[i].empty);
+                dataGround.grounds.Add(g);
+                x++;
             }
             Save();
         }
 
-        for (int i = 0; i < dataGround.grounds.Count; i++)
+        x = 0;
+
+        while (x < dataGround.grounds.Count)
         {
-            groundCtrls[i].SetInfoGround(dataGround.grounds[i]);
+            for (int i = 0; i < groundCtrls.Count; i++)
+            {
+                groundCtrls[i].SetInfoGround(dataGround.grounds[x], x);
+                x++;
+            }
+
+            for (int i = 0; i < vacantLands.Count; i++)
+            {
+                vacantLands[i].SetInfoVacantLand(dataGround.grounds[x], x);
+                x++;
+            }
         }
     }
     public void Save()
@@ -45,6 +67,11 @@ public class DataMap : Singleton<DataMap>
         foreach (var i in groundCtrls)
         {
             SetGround(i);
+        }
+
+        foreach (var i in vacantLands)
+        {
+            SetVacantLand(i);
         }
         Save();
     }

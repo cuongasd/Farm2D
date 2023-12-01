@@ -13,17 +13,18 @@ public class CropsController : ItemBase
     public int exp;
     public void Initialize()
     {
-        curHarvestTime = 0;
+        curHarvestTime = harvestTime;
         isRipe = false;
     }
 
     public void Update()
     {
-        if (curHarvestTime < harvestTime)
+        if (curHarvestTime > harvestTime)
         {
             glass.SetActive(true);
             meshRenderer.enabled = false;
-            curHarvestTime += Time.deltaTime;
+            curHarvestTime -= Time.deltaTime;
+            timeTxt.text = $"{(int)(curHarvestTime / 60):00}:{(int)(curHarvestTime % 60):00}";
         } else
         {
             isRipe = true;

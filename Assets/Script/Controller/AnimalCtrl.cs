@@ -12,20 +12,26 @@ public class AnimalCtrl : ItemBase
     public int exp;
     public void Initialize()
     {
-        curHarvestTime = 0;
+        curHarvestTime = harvestTime;
         isRipe = false;
-
+        timeImg.transform.LookAt(new Vector3(0, 0, 90));
+        iconFinish.transform.LookAt(new Vector3(0, 0, 90));
     }
 
     public void Update()
     {
         if (curHarvestTime > harvestTime)
         {
-            curHarvestTime += Time.deltaTime;
+            curHarvestTime -= Time.deltaTime;
+            timeImg.gameObject.SetActive(true);
+            iconFinish.gameObject.SetActive(false);
+            timeTxt.text = $"{(int)(curHarvestTime / 60):00}:{(int)(curHarvestTime % 60):00}";
         }
         else
         {
             isRipe = true;
+            timeImg.gameObject.SetActive(false);
+            iconFinish.gameObject.SetActive(true);
         }
     }
 

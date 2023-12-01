@@ -27,7 +27,7 @@ public class GameManager : Singleton<GameManager>
         dataMap.LoadData();
         if (firstPlay <= 0)
         {
-            DataPlayer.Instance.AddCoin(1000);
+            DataPlayer.Instance.AddCoin(100000);
             firstPlay++;
         }
     }

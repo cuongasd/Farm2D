@@ -36,9 +36,9 @@ public class GroundCtrl : ItemBase
         }
     }
 
-    public void SetInfoGround(Ground ground)
+    public void SetInfoGround(Ground ground, int id)
     {
-        id = ground.id;
+        this.id = id;
         if (ground.empty)
         {
             cropsController = Instantiate(Resources.Load<CropsController>("Crops_" + ground.idCrops), transform.position, Quaternion.Euler(0, 0, 0), GameManager.Instance.itemHolder);

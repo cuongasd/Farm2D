@@ -10,19 +10,13 @@ public class VacantLand : ItemBase
     public override void OnMouseUpAsButton()
     {
         base.OnMouseUpAsButton();
-        if (empty) return;
-        BtnAnimalCtrl btnAnimalCtrl = GameManager.Instance.uiController.GetScreen<PlayScreen>().btnAnimalCtrl;
-        if (animalCtrl != null)
-        {
-
-        }
-
         if (!empty)
         {
-            BtnCropsCtrl btnCropsCtrl = GameManager.Instance.uiController.GetScreen<PlayScreen>().btnCropsCtrl;
-            if (btnCropsCtrl != null && DataItem.Instance.GetAmountSpeeds(btnCropsCtrl.cropsController.id, BtnType.CROPS) > 0)
+            BtnAnimalCtrl btnAnimalCtrl = GameManager.Instance.uiController.GetScreen<PlayScreen>().btnAnimalCtrl;
+            Vector3 pos = new Vector3(transform.position.x, 0.18f, transform.position.z);
+            if (btnAnimalCtrl != null && DataItem.Instance.GetAmountSpeeds(btnAnimalCtrl.animalCtrl.id, BtnType.ANIMAL) > 0)
             {
-                animalCtrl = Instantiate(btnAnimalCtrl.animalCtrl, transform.position, Quaternion.Euler(0, 0, 0), GameManager.Instance.itemHolder);
+                animalCtrl = Instantiate(btnAnimalCtrl.animalCtrl, pos, Quaternion.Euler(0, Random.Range(0, 360), 0), GameManager.Instance.itemHolder);
                 animalCtrl.Initialize();
                 empty = true;
                 DataMap.Instance.SetVacantLand(this);
@@ -43,4 +37,17 @@ public class VacantLand : ItemBase
         }
     }
 
+    public void SetInfoVacantLand(Ground ground, int id)
+    {
+        this.id = id;
+        Vector3 pos = new Vector3(transform.position.x, 0.18f, transform.position.z);
+        if (ground.empty)
+        {
+            animalCtrl = Instantiate(Resources.Load<AnimalCtrl>("Animal_" + ground.idAnimals), pos, Quaternion.Euler(0, Random.Range(0, 360), 0), GameManager.Instance.itemHolder);
+            animalCtrl.Initialize();
+            animalCtrl.curHarvestTime = ground.time;
+            empty = true;
+        }
+
+    }
 }
