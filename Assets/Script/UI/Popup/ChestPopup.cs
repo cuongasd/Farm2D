@@ -20,7 +20,11 @@ public class ChestPopup : PopupUI
     public override void Initialize(UIController uiController)
     {
         base.Initialize(uiController);
-        btnClose.onClick.AddListener(Hide);
+        btnClose.onClick.AddListener(() =>
+        {
+            AudioManager.Instance.PlayOneShot("button", 1f);
+            Hide();
+        });
         foreach (var i in BtnItemChest)
         {
             i.Initialize();

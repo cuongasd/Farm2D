@@ -20,7 +20,7 @@ public class AnimalCtrl : ItemBase
 
     public void Update()
     {
-        if (curHarvestTime > harvestTime)
+        if (curHarvestTime > 0)
         {
             curHarvestTime -= Time.deltaTime;
             timeImg.gameObject.SetActive(true);

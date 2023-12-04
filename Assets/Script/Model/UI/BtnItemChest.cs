@@ -27,6 +27,7 @@ public class BtnItemChest : MonoBehaviour
 
     public void OnSell()
     {
+        AudioManager.Instance.PlayOneShot("button", 1f);
         DataItem.Instance.AddAmountRipe(id, btnType, -sellAmount);
         DataPlayer.Instance.AddCoin(totalPrice);
         SetTxt(0, 0);
@@ -35,6 +36,7 @@ public class BtnItemChest : MonoBehaviour
 
     public void OnUpBtn()
     {
+        AudioManager.Instance.PlayOneShot("button", 1f);
         if (sellAmount < DataItem.Instance.GetAmountRipe(id, btnType))
         {
             sellAmount++;
@@ -45,6 +47,7 @@ public class BtnItemChest : MonoBehaviour
 
     public void OnDownBtn()
     {
+        AudioManager.Instance.PlayOneShot("button", 1f);
         if (sellAmount > 0)
         {
             sellAmount--;

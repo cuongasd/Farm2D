@@ -18,6 +18,7 @@ public class BtnItemBuy : MonoBehaviour
 
     public void OnBuy()
     {
+        AudioManager.Instance.PlayOneShot("button", 1f);
         if (DataPlayer.Instance.player.coins >= price)
         {
             DataItem.Instance.AddItemSpeeds(id, btnType, 1);

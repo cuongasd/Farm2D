@@ -30,6 +30,7 @@ public class DataPlayer : Singleton<DataPlayer>
 
     public void AddCoin(int amount)
     {
+        AudioManager.Instance.PlayOneShot("addCoin", 1f);
         player.coins += amount;
         Save();
         GameManager.Instance.uiController.GetPopup<TopUIPopup>().UpdateTxt();

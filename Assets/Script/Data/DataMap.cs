@@ -10,9 +10,17 @@ public class DataMap : Singleton<DataMap>
         set => PlayerPrefs.SetString("data_map", value);
     }
 
+    public string strDataAvailable
+    {
+        get => PlayerPrefs.GetString("data_available", "");
+        set => PlayerPrefs.SetString("data_available", value);
+    }
+
     public DataGround dataGround;
+    public DataAvailable dataAvailable;
     public List<GroundCtrl> groundCtrls;
     public List<VacantLand> vacantLands;
+    public List<AvailableCtrl> availableCtrls;
     public void LoadData()
     {
         int x = 0;
@@ -55,6 +63,26 @@ public class DataMap : Singleton<DataMap>
                 x++;
             }
         }
+
+        if (strDataAvailable.Length <= 0)
+        {
+            dataAvailable = new DataAvailable();
+            for (int i = 0; i < availableCtrls.Count; i++)
+            {
+                Available available = new Available(i + 1);
+                dataAvailable.availables.Add(available);
+            }
+            SaveAvailable();
+        }
+        else
+        {
+            dataAvailable = JsonUtility.FromJson<DataAvailable>(strDataAvailable);
+        }
+
+        for (int i = 0; i < availableCtrls.Count; i++)
+        {
+            availableCtrls[i].SetInfo(dataAvailable.availables[i]);
+        }
     }
     public void Save()
     {
@@ -62,6 +90,17 @@ public class DataMap : Singleton<DataMap>
         dataMap = data;
     }
 
+    public void SaveAvailable()
+    {
+        string data = JsonUtility.ToJson(dataAvailable);
+        strDataAvailable = data;
+    }
+
+    public void SetAvailable(Available available)
+    {
+        dataAvailable.availables[available.id - 1].isExist = available.isExist;
+        SaveAvailable();
+    }
     public void SaveGround()
     {
         foreach (var i in groundCtrls)

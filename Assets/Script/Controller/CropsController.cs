@@ -15,18 +15,25 @@ public class CropsController : ItemBase
     {
         curHarvestTime = harvestTime;
         isRipe = false;
+        timeImg.transform.LookAt(new Vector3(0, 0, 90));
+        iconFinish.transform.LookAt(new Vector3(0, 0, 90));
     }
 
     public void Update()
     {
-        if (curHarvestTime > harvestTime)
+        if (curHarvestTime > 0)
         {
+            timeImg.gameObject.SetActive(true);
+            iconFinish.gameObject.SetActive(false);
             glass.SetActive(true);
             meshRenderer.enabled = false;
             curHarvestTime -= Time.deltaTime;
             timeTxt.text = $"{(int)(curHarvestTime / 60):00}:{(int)(curHarvestTime % 60):00}";
-        } else
+        }
+        else
         {
+            timeImg.gameObject.SetActive(false);
+            iconFinish.gameObject.SetActive(true);
             isRipe = true;
             glass.SetActive(false);
             meshRenderer.enabled = true;

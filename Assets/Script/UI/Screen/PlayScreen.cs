@@ -39,17 +39,20 @@ public class PlayScreen : ScreenUI
     }
     public void OnShop()
     {
+        AudioManager.Instance.PlayOneShot("button", 1f);
         uiController.ShowPopup<ShopPopup>(null);
     }
 
     public void OnChest()
     {
+        AudioManager.Instance.PlayOneShot("button", 1f);
         uiController.ShowPopup<ChestPopup>(null);
     }
 
     public void OnSetting()
     {
-
+        AudioManager.Instance.PlayOneShot("button", 1f);
+        uiController.ShowPopup<SettingPopup>(null);
     }
 
     public void SetBtnCrop(BtnCropsCtrl btnCropsCtrl)
@@ -75,6 +78,7 @@ public class PlayScreen : ScreenUI
     }
     public void OnCrops()
     {
+        AudioManager.Instance.PlayOneShot("button", 1f);
         for (int i = 0; i < btnItembases.Count; i++)
         {
             if (btnItembases[i].type == BtnType.CROPS)
@@ -94,6 +98,7 @@ public class PlayScreen : ScreenUI
 
     public void OnAnimal()
     {
+        AudioManager.Instance.PlayOneShot("button", 1f);
         for (int i = 0; i < btnItembases.Count; i++)
         {
             if (btnItembases[i].type == BtnType.ANIMAL)
