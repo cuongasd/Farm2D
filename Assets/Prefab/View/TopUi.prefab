@@ -244,7 +244,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelTxt: {fileID: 4160409162380990916}
   coinTxt: {fileID: 4160409161956924749}
-  exp: 0
 --- !u!1 &4160409162824760756
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ public class VacantLand : ItemBase
         {
             if (animalCtrl.isRipe)
             {
+                AudioManager.Instance.PlayOneShot("Claim", 1f);
                 DataItem.Instance.AddAmountRipe(animalCtrl.id, BtnType.ANIMAL, 1);
                 DataPlayer.Instance.AddExp(animalCtrl.exp);
                 Destroy(animalCtrl.gameObject);

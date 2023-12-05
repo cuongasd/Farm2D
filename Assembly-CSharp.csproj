@@ -67,6 +67,8 @@
     <Compile Include="Assets\Script\Data\DataMap.cs" />
     <Compile Include="Assets\Script\Model\UI\BtnItemChest.cs" />
     <Compile Include="Assets\Script\Model\GamePlay\FarmTool.cs" />
+    <Compile Include="Assets\Script\Data\AudioContainerSO.cs" />
+    <Compile Include="Assets\Script\Controller\AvailableCtrl.cs" />
     <Compile Include="Assets\Script\Model\GamePlay\VacantLand.cs" />
     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
@@ -82,6 +84,7 @@
     <Compile Include="Assets\ThirdParty\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Script\Controller\BtnAnimalCtrl.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickPlayerExample.cs" />
+    <Compile Include="Assets\Script\Controller\AudioManager.cs" />
     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenDeAudio.cs" />
     <Compile Include="Assets\Farm Life\Content\Plugins\Light Shaft\Scripts\LightShaft.cs" />
     <Compile Include="Assets\Script\UI\Popup\ShopPopup.cs" />
@@ -98,6 +101,7 @@
     <Compile Include="Assets\Script\Data\DataPlayer.cs" />
     <Compile Include="Assets\Joystick Pack\Examples\JoystickSetterExample.cs" />
     <Compile Include="Assets\Script\Base\ScreenUI.cs" />
+    <Compile Include="Assets\Script\Model\GamePlay\Available.cs" />
     <Compile Include="Assets\Script\Base\BtnItembase.cs" />
     <Compile Include="Assets\Joystick Pack\Scripts\Joysticks\FloatingJoystick.cs" />
     <Compile Include="Assets\Script\Controller\GameManager.cs" />
@@ -112,10 +116,6 @@
     <Compile Include="Assets\ThirdParty\Demigiant\DOTweenPro\DOTweenDeUnityExtended.cs" />
     <Compile Include="Assets\Script\Controller\AnimalCtrl.cs" />
     <Compile Include="Assets\Script\Controller\UIController.cs" />
-    <Compile Include="Assets\Script\Controller\AvailableCtrl.cs" />
-    <Compile Include="Assets\Script\Model\GamePlay\Available.cs" />
-    <Compile Include="Assets\Script\Controller\AudioManager.cs" />
-    <Compile Include="Assets\Script\Data\AudioContainerSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\_www.unityassetcollection.com.txt" />

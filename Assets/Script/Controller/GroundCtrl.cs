@@ -26,6 +26,7 @@ public class GroundCtrl : ItemBase
         {
             if (cropsController.isRipe)
             {
+                AudioManager.Instance.PlayOneShot("Claim", 1f);
                 DataItem.Instance.AddAmountRipe(cropsController.id, BtnType.CROPS, 1);
                 DataPlayer.Instance.AddExp(cropsController.exp);
                 Destroy(cropsController.gameObject);
